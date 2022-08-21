@@ -1,0 +1,196 @@
+﻿<Window x:Class="SmartNFTTools.Window1"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"       
+        xmlns:local="clr-namespace:SmartNFTTools"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Smart NFT Tools" Height="600" Width="350">
+
+    <Grid Background="#201A31">
+        <Grid Background="#202442">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Content="PROPERTY UPDATE"  HorizontalAlignment="Center" Margin="0,35,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Foreground="White" Height="44" Width="218" RenderTransformOrigin="0.511,-0.883" FontSize="18" FontWeight="Bold"/>
+            <DockPanel Height="30px" Background="#282D53" VerticalAlignment="Top" >
+                <Menu DockPanel.Dock="Top" Height="48" >
+                    <MenuItem Header="_Tools" Background="#282D53" Foreground="#373C60" Height="30">
+                        <MenuItem Header="_Property Update" Click="new_click" />
+                        <MenuItem Header="_Image Change" Click="changer_click"/>
+                        <MenuItem Header="_NFT Airdrop" Click="airdrop_click"/>
+                        <MenuItem Header="_Get Holders " Click="holders_click"/>
+                        <MenuItem Header="_User Item Check " Click="history_click"/>
+                        <MenuItem Header="_Item History Check " Click="itemhistory_click"/>
+                    </MenuItem>
+                    <MenuItem Header="_About" Background="#282D53" Foreground="#373C60" Height="30">
+                        <MenuItem Header="_About" Click="about_click" />
+                        <MenuItem Header="_Github" Click="github_click"/>
+                        <MenuItem Header="_Twitter" Click="twitter_click"/>
+                        <MenuItem Header="_NFTs" Click="nfts_click"/>
+                        <MenuItem Header="_Docs" Click="docs_click"/>
+                    </MenuItem>
+                </Menu>
+                <TextBox AcceptsReturn="True" />
+            </DockPanel>
+
+            <Label Content="DEVELOPED BY DESIGNER- 2022" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="26" RenderTransformOrigin="0.5,1.348" Margin="0,30,0,10" Foreground="#373C60"/>
+
+
+            <TextBox x:Name="LogBox"  Text="Ready..." TextWrapping="Wrap" RenderTransformOrigin="0.509,2.213" Height="200" Background="Transparent" BorderThickness="1,1,1,1" Margin="25,70,25,0" HorizontalAlignment="Center" VerticalAlignment="Top" BorderBrush="#19ABADB3" Foreground="#FF373C60" Width="280" FontSize="14"/>
+            <Grid Margin="0,200,0,0">
+                <TextBox x:Name="txt_holdCol" HorizontalAlignment="Center" Margin="0,80,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="300" Height="25" BorderThickness="0,0,0,1" BorderBrush="#19ABADB3" Foreground="#373C60">
+                    <TextBox.Style>
+
+                        <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                            <Style.Resources>
+                                <VisualBrush x:Key="CueBannerBrush" AlignmentX="Left" AlignmentY="Center" Stretch="None">
+                                    <VisualBrush.Visual>
+                                        <Label Content="COLLECTION ID 0x00000..." Foreground="#373C60" />
+                                    </VisualBrush.Visual>
+                                </VisualBrush>
+                            </Style.Resources>
+                            <Style.Triggers>
+                                <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
+                                    <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                                </Trigger>
+                                <Trigger Property="Text" Value="{x:Null}">
+                                    <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                                </Trigger>
+                                <Trigger Property="IsKeyboardFocused" Value="True">
+                                    <Setter Property="Background" Value="#373C60" />
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBox.Style>
+                </TextBox>
+                <TextBox x:Name="txt_itemToken" Margin="0,200,0,0" VerticalAlignment="Top" Width="300" BorderThickness="0,0,0,1" Height="25" BorderBrush="#19ABADB3" Foreground="#FF373C60" HorizontalAlignment="Center">
+                    <TextBox.Style>
+                        <Style xmlns:sys="clr-namespace:System;assembly=mscorlib" TargetType="{x:Type TextBox}">
+                            <Style.Resources>
+                                <VisualBrush x:Key="CueBannerBrush" AlignmentX="Left" AlignmentY="Center" Stretch="None">
+                                    <VisualBrush.Visual>
+                                        <Label Content="ITEM TOKEN" Foreground="#373C60" />
+                                    </VisualBrush.Visual>
+                                </VisualBrush>
+                            </Style.Resources>
+                            <Style.Triggers>
+                                <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
+                                    <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                                </Trigger>
+                                <Trigger Property="Text" Value="{x:Null}">
+                                    <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                                </Trigger>
+                                <Trigger Property="IsKeyboardFocused" Value="True">
+                                    <Setter Property="Background" Value="White" />
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBox.Style>
+                </TextBox>
+                <TextBox x:Name="txt_PropertValue" HorizontalAlignment="Center" Margin="0,170,0,0" VerticalAlignment="Top" Width="300" BorderThickness="0,0,0,1" Height="25" BorderBrush="#19ABADB3" Foreground="#FF373C60">
+                    <TextBox.Style>
+                        <Style xmlns:sys="clr-namespace:System;assembly=mscorlib" TargetType="{x:Type TextBox}">
+                            <Style.Resources>
+                                <VisualBrush x:Key="CueBannerBrush" AlignmentX="Left" AlignmentY="Center" Stretch="None">
+                                    <VisualBrush.Visual>
+                                        <Label Content="PROPERTY VALUE" Foreground="#373C60" />
+                                    </VisualBrush.Visual>
+                                </VisualBrush>
+                            </Style.Resources>
+                            <Style.Triggers>
+                                <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
+                                    <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                                </Trigger>
+                                <Trigger Property="Text" Value="{x:Null}">
+                                    <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                                </Trigger>
+                                <Trigger Property="IsKeyboardFocused" Value="True">
+                                    <Setter Property="Background" Value="White" />
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBox.Style>
+                </TextBox>
+
+
+                <TextBox x:Name="txt_PropertyName" HorizontalAlignment="Center" Foreground="#373C60" Margin="0,140,0,0" VerticalAlignment="Top" Width="300" BorderThickness="0,0,0,1" Height="25" BorderBrush="#19ABADB3">
+                    <TextBox.Style>
+                        <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                            <Style.Resources>
+                                <VisualBrush x:Key="CueBannerBrush" AlignmentX="Left" AlignmentY="Center" Stretch="None">
+                                    <VisualBrush.Visual>
+                                        <Label Content="PROPERTY NAME" Foreground="#373C60" />
+                                    </VisualBrush.Visual>
+                                </VisualBrush>
+                            </Style.Resources>
+                            <Style.Triggers>
+                                <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
+                                    <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                                </Trigger>
+                                <Trigger Property="Text" Value="{x:Null}">
+                                    <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                                </Trigger>
+                                <Trigger Property="IsKeyboardFocused" Value="True">
+                                    <Setter Property="Background" Value="#373C60" />
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBox.Style>
+                </TextBox>
+                <TextBox x:Name="txt_APIKey" VerticalAlignment="Top" HorizontalAlignment="Center" Width="300" RenderTransformOrigin="0.272,0.67" Grid.ColumnSpan="2" Height="25" Margin="0,110,0,0" BorderThickness="0,0,0,1" Foreground="#373C60" BorderBrush="#19ABADB3" Text="">
+                    <TextBox.Style>
+                        <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                            <Style.Resources>
+                                <VisualBrush x:Key="CueBannerBrush" AlignmentX="Left" AlignmentY="Center" Stretch="None">
+                                    <VisualBrush.Visual>
+                                        <Label Content="ENTER API KEY XX-XX-XX-XX" Foreground="#373C60" />
+                                    </VisualBrush.Visual>
+                                </VisualBrush>
+                            </Style.Resources>
+                            <Style.Triggers>
+                                <Trigger Property="Text" Value="{x:Static sys:String.Empty}">
+                                    <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                                </Trigger>
+                                <Trigger Property="Text" Value="{x:Null}">
+                                    <Setter Property="Background" Value="{StaticResource CueBannerBrush}" />
+                                </Trigger>
+                                <Trigger Property="IsKeyboardFocused" Value="True">
+                                    <Setter Property="Background" Value="#202442" />
+                                    <Setter Property="Foreground" Value="white" />
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBox.Style>
+                </TextBox>
+
+                <Button x:Name="btn_AutoAirdrop" Content="UPDATE" HorizontalAlignment="Center" Margin="0,262,0,0" VerticalAlignment="Top" Width="160" Height="30" Click="btn_ChangeImage" RenderTransformOrigin="0.478,3.082" Background="#41CD7D" FontSize="14px" BorderBrush="#41CD7D" FontFamily="Noto Sans" Foreground="#201A30" FontWeight="Bold" />
+
+                <Label Content="Donate - 0x411c9e886b3ce2237ac8486d62daf173798b541d" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="26" RenderTransformOrigin="0.5,1.348" Foreground="#FF716D7A" FontSize="10" Margin="0,0,0,25"/>
+                <Label Content="Version 0.6.8 - Beta" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="26" RenderTransformOrigin="0.5,1.348" HorizontalContentAlignment="Right" FontSize="9" Foreground="#33000000" Margin="0,0,10,-6"/>
+
+            </Grid>
+
+        </Grid>
+    </Grid>
+
+
+
+
+
+
+    
+</Window>
+
+
+
+
+
+
+
+
+
+
+

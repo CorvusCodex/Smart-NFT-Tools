@@ -1,0 +1,7 @@
+C:\Users\Aleksandar\Desktop\SmartNFTTools.pdb
+C:\Users\Aleksandar\Desktop\D3DCompiler_47_cor3.dll
+C:\Users\Aleksandar\Desktop\PenImc_cor3.dll
+C:\Users\Aleksandar\Desktop\PresentationNative_cor3.dll
+C:\Users\Aleksandar\Desktop\vcruntime140_cor3.dll
+C:\Users\Aleksandar\Desktop\wpfgfx_cor3.dll
+C:\Users\Aleksandar\Desktop\SmartNFTTools.exe

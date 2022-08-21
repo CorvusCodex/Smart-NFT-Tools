@@ -1,0 +1,65 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <PackageIcon>icon.png</PackageIcon>
+    <ApplicationIcon>splashscreen.ico</ApplicationIcon>
+    <SupportedOSPlatformVersion>7.0</SupportedOSPlatformVersion>
+    <RootNamespace>SmartNFTTools</RootNamespace>
+    <AssemblyVersion>0.6.8</AssemblyVersion>
+    <FileVersion>0.6.8</FileVersion>
+    <Copyright>DEVELOPED BY DESIGNER - LICENCED UNDER MIT LICENCE</Copyright>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="BSC.png" />
+    <None Remove="designer.png" />
+    <None Remove="splashscreen.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="splashscreen.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Costura.Fody" Version="5.7.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="MaterialDesignThemes" Version="4.6.0-ci259" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="designer.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <SplashScreen Include="splashscreen.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="ItemHistory.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserItems.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Checkholders.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="About.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Holders.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+  </ItemGroup>
+
+</Project>
