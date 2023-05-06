@@ -2,7 +2,7 @@
 
 ![This is an image](https://github.com/AlturaDesigner/Smart-NFT-Tools/blob/main/Source/SmartNFTTools/splashscreen.png)
 
-Open Source Application designed to help fellow artists with and without experience in programming smart NFTs, created by a DESIGNER with love for Altura.
+Open Source Application designed to help fellow artists with and without experience in programming smart NFTs, created by a CorvusCodex with love for Altura.
 
 Support me and future development of this app by buying my Smart NFTs on 
  [Altura NFT](https://app.alturanft.com/collection/56/0x4ddee11d87a535ec71817b558d81bda24f4cac7b?chain=bsc).
@@ -20,7 +20,7 @@ or with small donation to 0x411c9e886b3ce2237ac8486d62daf173798b541d   .
 
 MIT License
 
-Copyright (c) 2022 Designer
+Copyright (c) 2022 CorvusCodex
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
